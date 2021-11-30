@@ -1,9 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
 #calculadora-container {
+  width: 400px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  background-color: #000000;
+}
+
+#visor {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  margin-right: 35px;
+}
+
+#visor span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: 200;
 }
 
 #number_buttons_container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 15px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.button {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 45px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#number_buttons_container .button {
   background-color: #313131;
+}
+
+#zero {
+  flex-grow: 2;
+  border-radius: 50px 50px 50px 50px !important;
+  justify-content: left;
+  padding-left: 25px;
+}
+
+#operations_buttons_container {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 9;
+  display: flex;
+  flex-direction: column;
+}
+
+#operations_buttons_container {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 9;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-content: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 19px;
+}
+
+#operations_buttons_container .button {
+  background-color: #f69906;
+}
+
+#function_buttons_container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  align-content: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+#function_buttons_container .button {
+  background-color: #9f9f9f;
+  color: black;
+  font-size: 40px;
+  font-weight: 400;
 }
